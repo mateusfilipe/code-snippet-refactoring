@@ -10,9 +10,11 @@ export function App() {
   const [result, setResult] = useState<string>(
     'The result will be shown here.'
   );
+  const [loading, setLoading] = useState(false);
 
   const callReview = useCallback(async (message: string) => {
     try {
+      setLoading(true);
       const response = await axios.post(url + '/review', {
         message: message,
       });
@@ -21,6 +23,8 @@ export function App() {
     } catch (error) {
       console.error('Error calling review endpoint:', (error as Error).message);
       setResult('Error: Failed to get response from server');
+    } finally {
+      setLoading(false);
     }
   }, []);
 
@@ -28,7 +32,7 @@ export function App() {
     <div className="bg-gray-900 h-screen w-screen text-white font-mono p-4 overflow-auto flex flex-col gap-4">
       <Header />
       <div className="w-full h-full px-16 flex flex-col gap-4 items-center">
-        <Input callReview={callReview} />
+        <Input callReview={callReview} loading={loading} />
         <Output result={result} />
       </div>
     </div>
