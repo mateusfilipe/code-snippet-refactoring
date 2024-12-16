@@ -1,7 +1,16 @@
 import { getGptResponse, testGptConnection } from '../services/gptApi';
 import { Router } from 'express';
+import cors from 'cors';
 
 const router = Router();
+
+router.use(
+  cors({
+    origin: '*',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
 
 router.post('/', async (req, res) => {
   const { message } = req.body;

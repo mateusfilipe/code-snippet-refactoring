@@ -14,7 +14,10 @@ export const getGptResponse = async (message: string) => {
         {
           role: 'user',
           content:
-            "Can you explain what this code does? I'm interested in understanding how it works and the purpose of each part. Here's the code: " +
+            'Give me a natural-language explanation of what the code does.' +
+            'A refactored version of the code.' +
+            'A step-by-step reasoning of how the explanation was derived.' +
+            "Here's the code: " +
             message,
         },
       ],
