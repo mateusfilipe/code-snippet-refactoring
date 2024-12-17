@@ -86,3 +86,16 @@ An intelligent code refactoring tool that elevates your code quality through AI-
    - Backend: `/apps/backend/.env`
 
 > **Note:** These files contain sensitive information and should not be committed to version control.
+
+## 🔮 Future Features
+
+- Add a chat interface for real-time code assistance.
+> Use synchronous requests to deliver quick responses, displaying them in the chat interface.
+> And making the interface styled so it be more clear and user-friendly.
+- Implement a code editor with syntax highlighting and error detection.
+> Use the code editor from the [Monaco Editor](https://microsoft.github.io/monaco-editor/) library. 
+- Visualization of the code refactoring process.
+> Use the [Mermaid](https://mermaid.js.org/) library to visualize the code refactoring process.
+- Improve the visual design of the UI, including the chat interface.
+> Enhance the user experience through Tailwind CSS utility classes, implement a cohesive color palette, and ensure responsive design across all devices.
+
