@@ -64,3 +64,25 @@ An intelligent code refactoring tool that elevates your code quality through AI-
    ```
 
 > **Note:** Make sure to have both frontend and backend running simultaneously for full functionality.
+
+### Environment Setup
+
+1. Create the following `.env` files:
+
+   **Frontend (.env)**
+
+   ```plaintext
+   VITE_API_URL=YOUR_API_URL
+   ```
+
+   **Backend (.env)**
+
+   ```plaintext
+   OPENAI_API_KEY=YOUR_OPENAI_API_KEY
+   ```
+
+2. Place these files in their respective directories:
+   - Frontend: `/apps/ui/.env`
+   - Backend: `/apps/backend/.env`
+
+> **Note:** These files contain sensitive information and should not be committed to version control.
