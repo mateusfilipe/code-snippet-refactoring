@@ -3,7 +3,7 @@ export function Header() {
     <header>
       <div className="p-10">
         <h1 className="text-center text-4xl font-bold pb-2">
-          SPARK{' '}
+          SPARK
           <span role="img" aria-labelledby="lightning emoji">
             ⚡
           </span>
